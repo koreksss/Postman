@@ -1,4 +1,5 @@
-async function fetchWithTimeout(url, timeoutMs = 4000) {      //работа с таймаутами и отменой запросов, если сервер не отвечает за указанное время
+async function fetchWithTimeout(url, timeoutMs = 4000) {      //работа с таймаутами и отменой запросов
+                                                              //если сервер не отвечает за указанное время
     const ctrl = new AbortController();
     const id = setTimeout(() => ctrl.abort(), timeoutMs);
 
